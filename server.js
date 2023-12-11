@@ -3,6 +3,7 @@ const cors = require('cors');
 const axios = require('axios');
 
 const app = express();
+const PORT = process.env.PORT || 3000; // Use the provided port or default to 3000
 
 app.use(cors());
 
@@ -16,7 +17,6 @@ app.get('/api/profile_data', async (req, res) => {
   }
 });
 
-const PORT = 3000; // Choose a port for your server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
